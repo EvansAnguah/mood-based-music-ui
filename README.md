@@ -18,3 +18,6 @@ A Spotify-inspired front-end UI for a mood-based music app. Users can select a m
 1. Clone the repo:
    ```bash
    git clone https://github.com/EvansAnguah/mood-based-music-ui.git
+
+## View Page
+    https://EvansAnguah.github.io/mood-based-music-ui
