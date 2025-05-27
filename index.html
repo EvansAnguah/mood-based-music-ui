@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood-based Music UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="dark">
+  <div class="bg-image parallax" id="bgImage"></div>
+  <div class="mood-selector fixed top-0 left-0 w-48 h-full p-6 glass z-20">
+    <h1 class="text-2xl font-bold mb-6 text-center" style="font-family: 'Orbitron', sans-serif;">Moodify</h1>
+    <button onclick="changeMood('happy')" class="w-full py-3 mb-4 rounded-lg bg-yellow-500 text-white hover:bg-yellow-600">Happy</button>
+    <button onclick="changeMood('chill')" class="w-full py-3 mb-4 rounded-lg bg-blue-500 text-white hover:bg-blue-600">Chill</button>
+    <button onclick="changeMood('sad')" class="w-full py-3 mb-4 rounded-lg bg-purple-600 text-white hover:bg-purple-700">Sad</button>
+    <button onclick="changeMood('hype')" class="w-full py-3 mb-4 rounded-lg bg-red-500 text-white hover:bg-red-600">Hype</button>
+    <div class="mt-6 flex justify-center">
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="modeToggle" class="sr-only peer">
+        <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-gray-600">
+          <div class="w-5 h-5 bg-white rounded-full shadow-md transform transition-transform peer-checked:translate-x-5"></div>
+        </div>
+        <span class="ml-3 text-sm">Dark Mode</span>
+      </label>
+    </div>
+  </div>
+  <div class="ml-48 p-8 min-h-screen">
+    <div class="container mx-auto">
+      <h2 id="moodTitle" class="text-4xl font-bold mb-8" style="font-family: 'Orbitron', sans-serif;">Happy Vibes</h2>
+      <div id="songList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </div>
+  <div class="player-bar glass">
+    <div class="flex items-center justify-between max-w-4xl mx-auto">
+      <div class="flex items-center">
+        <div class="w-12 h-12 bg-gray-500 rounded-lg mr-4"></div>
+        <div>
+          <p class="font-semibold">Fake Song Title</p>
+          <p class="text-sm opacity-70">Fake Artist</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="text-2xl">⏮️</button>
+        <button class="text-3xl">⏯️</button>
+        <button class="text-2xl">⏭️</button>
+      </div>
+      <div class="w-1/3 h-1 bg-gray-400 rounded-full">
+        <div class="w-1/2 h-full bg-white rounded-full"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
